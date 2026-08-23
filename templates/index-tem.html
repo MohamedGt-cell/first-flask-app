@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width , initial-scale=1">
+        <title>
+            Private Notes (Main Page)
+        </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <h1 class="text-center mb-3">Login</h1>
+        
+        <div class="form-control">
+
+            <form class="row m-3" method="Post" action="/register">
+                <div class="row mb-3">
+
+                    <div class="col-auto">
+                        <label class="col-form-label"><strong>Username</strong></label>
+                    </div>
+
+                    <div class="col-auto">
+                        <input style="text-transform:lowercase" class=" form-control" minlength="4" maxlength="18" required name="username" placeholder="Username" autocomplete="off" autofocus type="text">
+                    </div>
+
+                </div>
+                <div class="row mb-3" >
+                    <div class="col-auto">
+                        <label class="col-form-label"><strong>Password</strong></label>
+                    </div>
+                    <div class="col-auto">
+                        <input style="text-transform:lowercase" class=" form-control" minlength="8" maxlength="20" required name="password" placeholder="Password" autocomplete="off" autofocus type="password">
+                    </div>
+                    <div class="col-auto">
+                        <span class="form-text">
+                            Must be 8-20 characters long.
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Login" class="form-control" >
+                </div>
+            </form>
+
+        </div>
+        <div class="text-center red">
+            <strong>
+                <h3>{{message1}}</h3>
+                <h6> {{message2}} </h6>
+            </strong>
+        </div>
+
+
+
+
+
+    </body>    
+
+</html>

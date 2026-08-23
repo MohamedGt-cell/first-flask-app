@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta name="viewport" content="width=device-width , initial-scale=1">
+        <title>
+            Registration List (Admin)
+        </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1 class="text-center m-3">Registration List</h1>
+        <table class="table table-bordered text-center">
+            <thead>
+                <tr>
+                    <th><span> ID </span></th>
+                    <th><span> Username </span></th>
+                    <th><span> Name </span></th>
+                    <th><span> Surename </span></th>
+                    <th><span> Age </span></th>
+                    <th><span> Email </span></th>
+                    <th><span> Password </span></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for registrant in registrants %}
+                <tr>
+                    <td><span> {{ registrant["id"] }} </span></td>
+                    <td><span> {{ registrant["username"] }} </span></td>
+                    <td><span> {{ registrant["name"] }} </span></td>
+                    <td><span> {{ registrant["surename"] }} </span></td>
+                    <td><span> {{ registrant["age"] }} </span></td>
+                    <td><span> {{ registrant["email"] }} </span></td>
+                    <td><span> {{ registrant["password"] }} </span></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

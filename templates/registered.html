@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+    <head>
+        <meta name="viewport" content="width=device-width , initial-scale=1">
+        <title>
+            Registration Page
+        </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1 class="text-center m-3"><strong>Sign up</strong></h1>
+        <h2 class="text-center m-3">Your informations</h2>
+        <div class="form-control">
+            <form class="row m-3" method="Post" action="/notes">
+                <div class="col-md-6">
+                    <label class="form-label">Name</label>
+                    <input style="text-transform:lowercase" class="form-control" required type="text" name="name" placeholder="Name" autofocus autocomplete="off">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Surename</label>
+                    <input style="text-transform:lowercase" class="form-control" required type="text" name="surename" placeholder="Surename" autofocus autocomplete="off">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Age</label>
+                    <select class="form-select form" name="age" required>
+                        <option value="" selected>Choose your age</option>
+                            {% for item in ages %}
+                                <option value="{{ item }}">{{ item }}</option>
+                            {% endfor %} 
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Email</label>
+                    <input style="text-transform:lowercase" class="form-control" type="text" name="email" placeholder="Email" autocomplete="off" autofocus required>
+                </div>
+                <div class="col-md-5"></div>
+                <div class="col-2 m-3">
+                <input class="form-control" type="submit" value="Sign up">
+                </div>
+            </form>
+        </div>
+    </body>
